@@ -3,8 +3,9 @@ The system is implemented in FRONTEND (MVC MODEL IN ASP.NET) AND BACKEND (MYSQL)
 
                 
 TOOLS AND ENVIRONMENT
-	Environment Required for MVC Asp.net:
-	Operating Systems
+
+Environment Required for MVC Asp.net:
+Operating Systems
 •	Window 11
 •	Windows 10
 •	Windows 8, 8.1
@@ -13,31 +14,31 @@ TOOLS AND ENVIRONMENT
 •	Windows server 2008 and later
 •	Android 4.1 & later
 •	iOS 9 & later
+
 	Hardware Environment
 •	Processor: x86 or x64
 •	RAM : 512 MB (minimum), 1 GB (recommended)
 •	Hard disc: up to 3 GB of free space may be required
+
 	Development Environment
 •	Microsoft Visual Studio 2010/2012/2013/2015/2017/2019/2022
 •	.NET Framework 3.5/4.0/4.5/4.5.1/4.6
 •	MVC Version: MVC3/MVC4/MVC5
 •	Microsoft SQL Server 2005 or higher
 •	Web browsers with JavaScript enabled
-	Browser Support
- 
-	Presentation Tier:
+
+Presentation Tier:
 •	HTML
 •	CSS
 •	JAVASCRIPT
 •	MVC Model in C#
 
 	Logic Tier/ Business Tier:
+C#
 
-	C#
-
-	Backend/Data Tier:
-	ADO.Net
-	SQL Server (Database)
+  Backend/Data Tier:
+ADO.Net
+SQL Server (Database)
 
 
 
