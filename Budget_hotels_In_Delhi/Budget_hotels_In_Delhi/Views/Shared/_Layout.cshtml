@@ -1,0 +1,642 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewBag.Title - Budget Hotels In Delhi</title>
+    <meta name="author" content="JCR">
+    <meta name="description" content="Budget Hotels in Delhi - Hotel & Resort Booking HTML Template">
+    <meta name="keywords" content="Budget Hotels in Delhi - Hotel & Resort Booking HTML Template">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/assets/C_image/logo/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/assets/C_image/logo/favicon.png">
+    <!-- <link rel="manifest" href="~/Content/assets/img/favicons/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/Content/assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+      Google Fonts
+    ============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@400;500;600;700;800;900&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Cinzel:wght@500&family=Jost:wght@500&display=swap" rel="stylesheet">
+    <!--==============================
+        All CSS File
+    ============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/Content/assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="~/Content/assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="~/Content/assets/css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="~/Content/assets/css/slick.min.css">
+    <!-- nice-select -->
+    <link rel="stylesheet" href="~/Content/assets/css/datetimepicker.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+
+
+    <style>
+        /*Sk*/
+        .header-layout2 .header-top {
+            height: unset !important;
+        }
+
+        .header-links ul {
+            padding: 0px !Important;
+        }
+
+        .Css-sk-btn {
+            margin: 6px;
+            height: unset !important;
+            letter-spacing: 1px;
+            background: #ff9900 !important;
+            color: #fff !important;
+            font-size: 16px !Important;
+            font-weight: 700;
+            border-radius: 2px !important;
+            padding: 5px;
+        }
+
+        .Css-head-logo {
+            padding: 24px 0px;
+        }
+
+        .header-layout2 .main-menu > ul > li > a:hover, .header-layout2 .main-menu > ul > li > a.active {
+            color: #ff9a00 !Important;
+        }
+
+        @@media(min-width:320px) and (max-width:768px) {
+            .Css-head-logo {
+                padding: 11px 0px;
+            }
+
+            .as-menu-wrapper .mobile-logo {
+                background-color: rgb(14 14 14) !Important;
+                padding: 20px !important;
+            }
+        }
+    </style>
+
+    <style>
+
+        /*ENQUIRY button CSS*/
+        as-btn.style4 {
+            padding: 14px 30px;
+        }
+
+        .as-btn {
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            vertical-align: middle;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px 35px;
+            -webkit-box-shadow: 0px 4px 20px rgba(218, 60, 60, 0.5);
+            -moz-box-shadow: 0px 4px 20px rgba(218, 60, 60, 0.5);
+            box-shadow: 0px 4px 20px rgba(218, 60, 60, 0.5);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+
+        .custom-btn {
+            width: 171px;
+            height: 32px;
+            color: #fff;
+            border-radius: 5px;
+            justify-content: center;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+            outline: none;
+        }
+        /* 11 */
+        .btn-11 {
+            border: none;
+            background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+            color: #fff;
+            overflow: hidden;
+        }
+
+            .btn-11:hover {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .btn-11:before {
+                position: absolute;
+                content: '';
+                display: inline-block;
+                top: -180px;
+                left: 0;
+                width: 30px;
+                height: 100%;
+                background-color: #fff;
+                animation: shiny-btn1 3s ease-in-out infinite;
+            }
+
+            .btn-11:hover {
+                opacity: .7;
+            }
+
+            .btn-11:active {
+                box-shadow: 4px 4px 6px 0 rgba(255,255,255,.3), -4px -4px 6px 0 rgba(116, 125, 136, .2), inset -4px -4px 6px 0 rgba(255,255,255,.2), inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+            }
+
+
+        @@-webkit-keyframes shiny-btn1 {
+            0% {
+                -webkit-transform: scale(0) rotate(45deg);
+                opacity: 0;
+            }
+
+            80% {
+                -webkit-transform: scale(0) rotate(45deg);
+                opacity: 0.5;
+            }
+
+            81% {
+                -webkit-transform: scale(4) rotate(45deg);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(50) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <style>
+        :root {
+            --theme-color: #a4193d;
+            --title-color: #060303;
+        }
+
+        .header-layout2 .header-top {
+            height: 42px;
+            position: relative;
+        }
+
+        .breadcumb-wrapper {
+            height: 250px;
+        }
+
+        .content-justify {
+            text-align: justify !important;
+        }
+
+        .css_heading {
+            font-family: 'Cinzel', serif;
+        }
+
+        .hotel-card_subtitle {
+            font-family: 'Audiowide', cursive;
+        }
+
+        sub-title {
+            font-family: 'Audiowide', cursive;
+        }
+
+        .footer-text {
+            text-align: justify !important;
+        }
+
+        @@media (max-width: 1299px) {
+            .header-layout2 .main-menu {
+                margin-left: 34px;
+            }
+        }
+
+
+        @@media (min-width: 992px) {
+            .container-md, .container-sm {
+                max-width: 1013px;
+            }
+        }
+
+
+            @@media (max-width: 1199px) {
+                .header-layout2 .main-menu > ul > li {
+                    margin: 0px 6px;
+                }
+            }
+         @@media(min-width:1650px) and (max-width:1680px) {
+            .header-layout2 .main-menu {
+                margin-left: 40px;
+            }
+            }
+
+
+
+
+    </style>
+</head>
+<body>
+    <!--==============================
+       Mobile Menu
+     ============================== -->
+    <div class="as-menu-wrapper">
+        <div class="as-menu-area text-center">
+            <button class="as-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+
+                <a href="/">
+                    <img src="~/Content/assets/C_image/logo/budgets_hotel_in_Delhi-w.png" alt="budget hotel in delhi" />
+
+                </a>
+            </div>
+            <div class="as-mobile-menu">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="/About">About us</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="/AboutDelhi">AboutDelhi</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/HotelList">Hotel List</a>
+                        @*<ul class="sub-menu">
+                                <li><a href="/Details">Details </a></li>
+                            </ul>*@
+                    </li>
+
+                    <li class="">
+                        <a href="/TourPackages">Tour Pacakges</a>
+                        @*<ul class="sub-menu">
+                                <li><a href="#">Tour Packages One</a></li>
+                                <li><a href="#">Tour Packages Two</a></li>
+                                <li><a href="#">Tour Packages Three</a></li>
+                                <li><a href="#">Tour Packages Four</a></li>
+                                <li><a href="#">Tour Packages Five</a></li>
+                            </ul>*@
+                    </li>
+
+                    <li>
+                        <a href="/TopDestination">Top Destination</a>
+                    </li>
+                    <li>
+                        <a href="/Gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="/Contact">Contact Us</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+        Header Area
+    ==============================-->
+
+    <header class="as-header header-layout2 header-absolute">
+        <div class="header-top">
+            <div class="container as-container text-lg-start text-center">
+                <div class="menu-top">
+                    <div class="row justify-content-between justify-content-lg-between align-items-center">
+                        <div class="col-auto d-none d-xl-block">
+                            <div class="header-links">
+                                <ul>
+                                    <li><i class="fat fa-phone"></i><a href="tel:+917004450098">+917004450098</a></li>
+                                    <li>
+                                        <i class="fat fa-envelope"></i> <a href="mailto:jcrtravelservices@outlook.com">jcrtravelservices@outlook.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fat fa-location-dot"></i>New Delhi, Delhi
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-auto d-none d-xl-block">
+                            <div class="header-right">
+                                <a href="/#HomeContact" id="enquirybtn" class="Css-sk-btn custom-btn btn-11 s-btn style4 shadow-none "><span>Enquiry</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container as-container">
+
+                    <div class="row justify-content-start justify-content-lg-start align-items-start">
+
+
+                        <div class="col-auto">
+                            <div class="header-logo style1 Css-head-logo">
+                                <a href="/">  <img src="~/Content/assets/C_image/logo/budgets_hotel_in_Delhi-w.png?width=195" alt="budget hotel in delhi" /></a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu d-none d-lg-block ">
+                                <ul>
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+
+                                    <li class="menu-item-has-children">
+                                        <a href="/About">About</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="/AboutDelhi">About Delhi</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    @*<li>
+                                            <a href="/AboutDelhi">About Delhi</a>
+                                        </li>
+                                    *@
+
+                                    <li class="menu-item-has-children">
+                                        <a href="/HotelList">Hotel List</a>
+                                    </li>
+
+                                    <li class="menu-item-has-children">
+                                        <a href="/TourPackages">Tour Pacakges</a>
+                                        @*<ul class="sub-menu">
+                                                <li><a href="#">Tour Packages One</a></li>
+                                                <li><a href="#">Tour Packages Two</a></li>
+                                                <li><a href="#">Tour Packages Three</a></li>
+                                                <li><a href="#">Tour Packages FOur</a></li>
+                                                <li><a href="#">Tour Packages FIve</a></li>
+                                            </ul>*@
+                                    </li>
+
+                                    @*<li>         <a href="/Service">Services</a>  </li>*@
+
+                                    <li>
+                                        <a href="/TopDestination">Top Destination</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Gallery">Gallery</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Contact">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <button type="button" class="as-menu-toggle d-inline-block d-lg-none">
+                                <i class="far fa-bars"></i>
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    @RenderBody()
+
+
+    <!--==============================
+        Newsletter Area
+        ==============================-->
+    @*<div class="">
+            <div class="container newsletter">
+                <div class="footer-top background-image" style="background-image: url(&quot;Content/assets/img/bg/subscribe_bg_1.jpg&quot;);">
+                    <div class="footer-newsletter">
+                        <div class="footer-wrpp">
+                            <h3 class="h3 newsletter-title">Get In Touch</h3>
+                            <p class="newsletter-desc">Write Your Enquiry, Problem and we will connect you soon</p>
+                        </div>
+
+                            <a href="" class="as-btn style5 shadow-none">Subscribe</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    <!--==============================
+        Footer Area
+    ==============================-->
+    <footer class="footer-wrapper">
+        <div class="footer-area  footer-layout2">
+            <div class="container">
+                <div class="widget-area">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="widget footer-widget">
+                                <div class="as-widget-about">
+                                    <div class="about-logo">
+
+                                        <a href="/"><img src="~/Content/assets/C_image/logo/budgets_hotel_in_Delhi-w.png?height=45" alt="Budget Hotels in Delhi"></a>
+                                    </div>
+                                    <p class="footer-text">
+                                        Looking for a budget hotel? For those on a budget, these cheap and cheerful hotels still have a lot to offer,
+                                        with most offering WiFi and convenient locations.
+                                    </p>
+                                    <div class="as-social footer-social">
+                                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.skype.com/"><i class="fab fa-skype"></i></a>
+                                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-auto">
+                            <div class="widget widget_nav_menu footer-widget">
+                                <h3 class="widget_title">Usefull Links</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/About">About Us</a></li>
+                                        @*<li><a href="/HotelList">Hotel List</a></li>
+                                            <li><a href="/TourPackages">Tour Packages</a></li>
+                                            <li>
+                                                <a href="/TopDestination">Top Destination</a>
+                                            </li>*@
+                                        <li><a href="/Gallery">Gallery</a></li>
+                                        @*<li><a href="/Service">Services</a></li>*@
+                                        <li><a href="/Contact">Contact US</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-auto">
+                            <div class="widget footer-widget">
+                                <h3 class="widget_title">Contact Us</h3>
+                                <div class="as-widget-contact">
+                                    <div class="info-box">
+                                        <div class="info-box_icon">
+                                            <i class="fal fa-location-dot"></i>
+                                        </div>
+                                        <p class="info-box_text">
+                                            Suryas Bageshwari, boring canal road, 800001
+                                        </p>
+                                    </div>
+                                    <div class="info-box">
+                                        <div class="info-box_icon">
+                                            <i class="fal fa-envelope"></i>
+                                        </div>
+                                        <p class="info-box_text">
+                                            <a href="mailto:jcrtravelservices@outlook.com" class="info-box_link">
+                                                jcrtravelservices@outlook.com
+                                            </a>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="info-box">
+                                        <div class="info-box_icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <p class="info-box_text">
+                                            <a href="tel:+917004450098" class="info-box_link">+917004450098</a>
+                                            @*<a href="tel: +163-1202-0066" class="info-box_link"> (+163)-1202-0066</a>*@
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="widget footer-widget">
+                                <h3 class="widget_title">Gallery Showcase</h3>
+                                <div class="sidebar-gallery">
+                                    <div class="gallery-thumb">
+                                        <img src="~/Content/assets/img/widget/gallery_2_1.jpg" alt="Gallery Image">
+                                    </div>
+                                    <div class="gallery-thumb">
+                                        <img src="~/Content/assets/img/widget/gallery_2_2.jpg" alt="Gallery Image">
+                                    </div>
+                                    <div class="gallery-thumb">
+                                        <img src="~/Content/assets/img/widget/gallery_2_3.jpg" alt="Gallery Image">
+                                    </div>
+                                    <div class="gallery-thumb">
+                                        <img src="~/Content/assets/img/widget/gallery_2_4.jpg" alt="Gallery Image">
+                                    </div>
+                                    <div class="gallery-thumb">
+                                        <img src="~/Content/assets/img/widget/gallery_2_5.jpg" alt="Gallery Image">
+                                    </div>
+                                    <div class="gallery-thumb">
+                                        <img src="~/Content/assets/img/widget/gallery_2_6.jpg" alt="Gallery Image">
+                                    </div>
+                                    @*<div class="gallery-thumb">
+                                            <img src="~/Content/assets/img/widget/gallery_2_5.jpg" alt="Gallery Image">
+                                        </div>
+                                        <div class="gallery-thumb">
+                                            <img src="~/Content/assets/img/widget/gallery_2_6.jpg" alt="Gallery Image">
+                                        </div>
+                                        <div class="gallery-thumb">
+                                            <img src="~/Content/assets/img/widget/gallery_2_5.jpg" alt="Gallery Image">
+                                        </div>*@
+
+                                </div>
+                            </div>
+                            <div class="footer-btn mt-10">
+                                <a href="/Gallery" class=" as-btn style4 shadow-none">More Images</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap style2">
+            <div class="container ">
+                <div class="row align-items-lg-start">
+                    <div class="col-lg">
+                        <p class="copyright-text">
+                            &copy; @DateTime.Now.Year  <a href="/">Budget Hotels of Delhi</a>. All Rights Reserved. Powered by <a href="https://dotplus.in/" class="tooltip_Dotplus" target="_blank"><img src="https://dotplus.in/images/logo.png?width=75&amp;height=25"> </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                  style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg>
+    </div>
+
+
+
+    <!--==============================
+        Main Js
+    ============================== -->
+    <!--==============================
+        All Js File
+    ============================== -->
+    <!-- Jquery -->
+    <script src="~/Content/assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="~/Content/assets/js/slick.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="~/Content/assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="~/Content/assets/js/jquery.counterup.min.js"></script>
+    <!-- imagesloaded Filter -->
+    <script src="~/Content/assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="~/Content/assets/js/isotope.pkgd.min.js"></script>
+    <!-- nice-select -->
+    <script src="~/Content/assets/js/nice-select.min.js"></script>
+    <!-- datetimepicker -->
+    <script src="~/Content/assets/js/datetimepicker.min.js"></script>
+    <!-- Main Js File -->
+    <script src="~/Content/assets/js/main.js"></script>
+
+
+
+
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

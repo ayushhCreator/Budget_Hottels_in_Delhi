@@ -1,0 +1,312 @@
+﻿@using Budget_hotels_In_Delhi.Models
+@model tbl_HotelList
+
+
+
+@{
+    ViewBag.Title = " Hotel Details";
+}
+
+<!--==============================
+    Breadcumb
+============================== -->
+<div class="breadcumb-wrapper " data-bg-src="/Content/assets/AYUSIMG/4.PNG">
+    <div class="container mt-5">
+        <div class="breadcumb-content ">
+            <h4 class="breadcumb-title">Hotel Details</h4>
+            <ul class="breadcumb-menu">
+                <li><a href="/">HOME</a></li>
+
+                <li>HOTELS  DETAILS</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--==============================
+Room Details Area
+==============================-->
+<section class="room-details-area mt-50">
+    <div class="container">
+        @foreach (var item in ViewBag.PackageMasterDetails)
+        {
+            <div class="col mb-3">
+                <div class="sidebar">
+                    <div class="widget style2">
+                        <div class="widget-content">
+                            <h2 class="text-white text-center">
+                                @Html.Raw(item.htl_Heading)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                @Html.Raw(item.htl_image)
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-xxl-7 col-lg-7">
+                    <div class="room-details">
+                        <div class="room-details_price">
+                            <span class="room-details_subtitle">  @item.htl_Duration</span>
+                            <div class="service-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h2 class="room-details_title">Overview </h2>
+
+                        @Html.Raw(@item.htl_Overview)
+                       
+                        <div>
+                            <div class="title-area mt-5 mb-5">
+                                <h3 class="sec-title">Hotels Details</h3>
+                            </div>
+                            <div class="accordion-area accordion" id="faqAccordion">
+                                <div class="accordion-card active">
+
+                                    @Html.Raw(item.htl_Galance)
+
+                                </div>
+
+                                <div class="accordion-card">
+
+                                    @Html.Raw(item.htl_Amenities)
+
+                                </div>
+
+
+                                <div class="accordion-card ">
+
+                                    @Html.Raw(item.htl_room_Amenities)
+
+                                </div>
+
+
+                                <div class="accordion-card">
+
+                                    @Html.Raw(item.htl_feepolicies)
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-5 col-lg-5">
+                    <div class="sidebar mt-60">
+                        <div class="widget style2">
+                            <div class="widget-content">
+                                <h3 class="widget-title text-center">Book Your Room</h3>
+                            </div>
+                            <form action="" method="POST" class="contact-form style5 ajax-contact">
+                                <div class="row">
+                                    <div class="form-group col-12">
+                                        <i class="fal fa-user"></i>
+                                        <input type="text" class="form-control" name="name" id="name"
+                                               placeholder="Your Full Name">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <i class="fal fa-envelope"></i>
+                                        <input type="email" class="form-control" name="email" id="email"
+                                               placeholder="Your email">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <i class="fa-regular fa-phone"></i>
+                                        <input type="tel" class="form-control" name="number" id="number"
+                                               placeholder="Phone Number">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <select name="subject" id="subject" class="form-dropdown nice-select">
+                                            <option value="" disabled selected hidden>Person</option>
+                                            <option value="man">man</option>
+                                            <option value="woman">woman</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="booking-check">
+                                            <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Chack in">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="booking-check">
+                                            <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Chack Out">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <i class="fa-thin fa-pencil"></i>
+                                        <textarea name="message" id="message" cols="15" rows="2" class="form-control"
+                                                  placeholder="write Message"></textarea>
+
+                                    </div>
+                                    <div class="form-btn col-12 text-center">
+                                        <button class="as-btn shadow-none">Book Now</button>
+                                    </div>
+                                </div>
+                                <p class="form-messages mb-0 mt-3"></p>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        }
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!--==============================
+Related Area
+==============================-->
+<section class="related-section space-bottom pt-100" id="service-sec">
+    <div class="container">
+        <div class="title-area mt-n1">
+            <h2 class="sec-title">Room Options</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-card_img">
+                        <img src="/Content/assets/img/service/service_1_1.jpg" alt="Service">
+                    </div>
+                    <div class="service-card_title has-bg">
+                        <div class="service-price">
+                            <span class="service-card_subtitle">PRICE $120.00 NIGHT</span>
+                            <div class="service-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="service-card_title"><a href="#">Standard Room,1 Double Bed</a></h3>
+                    </div>
+                    <div class="service-card_content">
+                        <div class="service-price">
+                            <span class="service-card_subtitle">PRICE $120.00 NIGHT</span>
+                            <div class="service-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="service-card_title"><a href="#">Standard Room,1 Double Bed</a></h3>
+
+                        <div class="service-card-btn">
+
+                            <a href="#" class="as-btn black-btn shadow-none">Book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-card_img">
+                        <img src="/Content/assets/img/service/service_1_2.jpg" alt="Service">
+                    </div>
+                    <div class="service-card_title has-bg">
+                        <div class="service-price">
+                            <span class="service-card_subtitle">PRICE $120.00 NIGHT</span>
+                            <div class="service-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="service-card_title"><a href="#">Standard Double/ Twin Room</a></h3>
+                    </div>
+                    <div class="service-card_content">
+                        <div class="service-price">
+                            <span class="service-card_subtitle">PRICE $120.00 NIGHT</span>
+                            <div class="service-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="service-card_title"><a href="#">Standard Double/ Twin Room</a></h3>
+
+                        <div class="service-card-btn">
+
+                            <a href="#" class="as-btn black-btn shadow-none">Book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-card_img">
+                        <img src="/Content/assets/img/service/service_1_3.jpg" alt="Service">
+                    </div>
+                    <div class="service-card_title has-bg">
+                        <div class="service-price">
+                            <span class="service-card_subtitle">PRICE $120.00 NIGHT</span>
+                            <div class="service-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="service-card_title">
+                            <a href="#">Deluxe Double Room</a>
+                        </h3>
+                    </div>
+                    <div class="service-card_content">
+                        <div class="service-price">
+                            <span class="service-card_subtitle">PRICE $120.00 NIGHT</span>
+                            <div class="service-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="service-card_title">
+                            <a href="#">Deluxe Double Room</a>
+                        </h3>
+
+                        <div class="service-card-btn">
+
+                            <a href="#" class="as-btn black-btn shadow-none">Book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+

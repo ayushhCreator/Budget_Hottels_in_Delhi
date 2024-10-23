@@ -1,0 +1,104 @@
+﻿
+@using Budget_hotels_In_Delhi.Models
+@model tbl_TourPackage
+
+@{
+    ViewBag.Title = "TourPackages";
+}
+
+<!--==============================
+    Breadcumb
+============================== -->
+<div class="breadcumb-wrapper " data-bg-src="/Content/assets/AYUSIMG/4.PNG">
+    <div class="container ">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title">Tour Packages</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="/">Home</a></li>
+                <li>Tour Packages</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--==============================
+Service Area
+   ==============================-->
+<section class="space" id="service-sec">
+    <div class="container">
+        <div class="col mb-3">
+            <div class="sidebar">
+                <div class="widget style2">
+                    <div class="widget-content">
+                        <h2 class="text-white text-center"> Our Tour Packages</h2>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+
+
+
+
+            @foreach (var item in ViewBag.MyList)
+            {
+
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="service-card mb-24">
+                        <div class="service-card_img">
+                            <img src=" @item.PackImage" alt="Service">
+                        </div>
+                        <div class="service-card_title has-bg">
+                            <div class="service-price">
+                                <span class="service-card_subtitle">  @item.PackPrice</span>
+                                <div class="service-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-card_title"><a href="/TourPackageDetails/@item.Id"> @item.PackName</a></h3>
+                        </div>
+                        <div class="service-card_content">
+                            <div class="service-price">
+                                <span class="service-card_subtitle">@item.PackPrice</span>
+                                <div class="service-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-card_title"><a href="/TourPackageDetails/@item.Id"> @item.PackName</a></h3>
+                            <p class="service-card_text">
+                          
+                               @item.PackDetails
+                            </p>
+                            <div class="service-card-btn">
+                                <a href="/TourPackageDetails/@item.Id" class=" as-btn style3 mr-10 shadow-none">Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+    @*<div class="as-pagination text-center">
+            <ul>
+                <li><a href="/TourPackages"><i class="far fa-arrow-left"></i></a></li>
+                <li><a href="/About">1</a></li>
+                <li><a href="/About">2</a></li>
+                <li><a href="/About">3</a></li>
+                <li><a href="/TourPackages"><i class="far fa-arrow-right"></i></a></li>
+            </ul>
+        </div>*@
+</section>
+
+

@@ -1,0 +1,222 @@
+﻿@using Budget_hotels_In_Delhi.Models
+@model tbl_HotelList
+
+
+
+@{
+    ViewBag.Title = "HotelList";
+}
+
+<!--==============================
+    Breadcumb
+============================== -->
+<div class="breadcumb-wrapper " data-bg-src="/Content/assets/AYUSIMG/4.PNG">
+    <div class="container mt-5">
+        <div class="breadcumb-content">
+            <h3 class="breadcumb-title"> Hotel List</h3>
+            <ul class="breadcumb-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>Hotels</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!--==============================
+    All Hotels
+=============================-->
+
+
+<section class="space-bottom">
+    <div class="container">
+      
+        <div class="col mt-5 mb-3">
+            <div class="sidebar">
+                <div class="widget style2">
+                    <div class="widget-content">
+                        <h2 class="text-white text-center"> Our Hotels</h2>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <nav class="tablist">
+            <div class="filter-menu nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="active" id="nav-dexury-tab" data-bs-toggle="tab" data-bs-target="#nav-dexury-one"
+                        type="button" role="tab">
+                    Budget Hotels
+                </button>
+                <button class="" id="nav-luxury-tab" data-bs-toggle="tab" data-bs-target="#nav-luxury-two" type="button"
+                        role="tab">
+
+                    Deluxe Hotels
+
+                </button>
+                <button class="" id="nav-queen-tab" data-bs-toggle="tab" data-bs-target="#nav-queen-three"
+                        type="button" role="tab">
+                    Heritage Hotels
+                </button>
+
+            </div>
+        </nav>
+
+        <div class="tab-content " id="nav-tabContent">
+
+            <div class="tab-pane slider-shadow show active fade" id="nav-dexury-one" role="tabpanel">
+                <div class="row">
+
+
+
+
+
+
+
+                    @foreach (var item in ViewBag.BudHotel)
+                    {
+
+                        <div class="col-md-4 col-xl-4">
+
+                            <div class="service-card-two style3 mb-24 mt-0">
+                                <div class="service-card_img">
+                                    <img src=" @item.HotelImage" alt="Service">
+                                </div>
+
+
+                                <div class="service-card_content-two">
+                                    <div>
+                                        <div class="service-price">
+                                            <span class="service-card_subtitle">@item.HotelPrice </span>
+                                            <div class="service-star">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="service-card_title">
+                                            <a href="/Details"> @item.HotelName</a>
+                                        </h5>
+                                    </div>
+
+                                    <div class="service-wrapper">
+                                        <a href="/Details/@item.Id" class="line-btn style3">VIEW DETAILS</a>
+                                        <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    }
+
+                </div>
+            </div>
+
+            <div class="tab-pane slider-shadow fade" id="nav-luxury-two" role="tabpanel">
+                <div class="row ">
+
+
+                    @foreach (var item in ViewBag.DeluxeHotel)
+                    {
+
+                        <div class="col-md-4 col-xl-4">
+
+                            <div class="service-card-two style3 mb-24 mt-0">
+                                <div class="service-card_img">
+                                    <img src=" @item.HotelImage" alt="Service">
+                                </div>
+
+
+                                <div class="service-card_content-two">
+                                    <div>
+                                        <div class="service-price">
+                                            <span class="service-card_subtitle">@item.HotelPrice </span>
+                                            <div class="service-star">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="service-card_title">
+                                            <a href="/Details"> @item.HotelName</a>
+                                        </h5>
+                                    </div>
+
+                                    <div class="service-wrapper">
+                                        <a href="/Details/@item.Id" class="line-btn style3">VIEW DETAILS</a>
+                                        <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    }
+
+                </div>
+            </div>
+
+
+            <div class="tab-pane slider-shadow fade" id="nav-queen-three" role="tabpanel">
+                <div class="row ">
+
+                    @foreach (var item in ViewBag.HeritagHotel)
+                    {
+
+                        <div class="col-md-4 col-xl-4">
+
+                            <div class="service-card-two style3 mb-24 mt-0">
+                                <div class="service-card_img">
+                                    <img src=" @item.HotelImage" alt="Service">
+                                </div>
+
+
+                                <div class="service-card_content-two">
+                                    <div>
+                                        <div class="service-price">
+                                            <span class="service-card_subtitle">@item.HotelPrice </span>
+                                            <div class="service-star">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="service-card_title">
+                                            <a href="/Details"> @item.HotelName</a>
+                                        </h5>
+                                    </div>
+
+                                    <div class="service-wrapper">
+                                        <a href="/Details/@item.Id" class="line-btn style3">VIEW DETAILS</a>
+                                        <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    }
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+

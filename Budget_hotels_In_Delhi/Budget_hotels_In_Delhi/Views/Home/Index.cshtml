@@ -1,0 +1,1408 @@
+﻿
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .service-card-two {
+        background: var(--white-color);
+        -webkit-box-shadow: 0px 4px 15px rgba(10, 29, 53, 0.08);
+        -moz-box-shadow: 0px 4px 15px rgba(10, 29, 53, 0.08);
+        box-shadow: 0px 4px 15px rgba(10, 29, 53, 0.08);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: -2px;
+        padding: 10px;
+        margin: 0px 0px 0px 0px;
+    }
+    .hotel-title {
+        color: #a4193d;
+    }
+    .service-card-two .service-card_title {
+        color: var(--title-color);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 33px;
+        margin-bottom: 16px;
+    }
+
+</style>
+
+<!--==============================
+Hero Area
+==============================-->
+
+<div class="as-hero-wrapper hero-1" id="hero">
+    <div class="hero-slider-2 as-carousel" data-fade="true" data-slide-show="1" data-md-slide-show="1"
+         data-arrows="true" data-xl-arrows="true" data-ml-arrows="true" data-lg-arrows="true">
+
+
+        <div class="as-hero-slide">
+            <div class="as-hero-bg" data-bg-src="/Content/assets/AYUSIMG/img4.png">
+            </div>
+            <div class="container">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="hero-style1">
+                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.1s">Welcome </span>
+                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">The Best Place To Relax</h1>
+                        <p class="hero-subtext" data-ani="slideindown" data-ani-delay="0.1s">HOTEL AND TOUR PACKAGES</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="as-hero-slide">
+            <div class="as-hero-bg" data-bg-src="/Content/assets/AYUSIMG/img3.jpg">
+            </div>
+            <div class="container">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="hero-style1">
+                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.1s">
+                            Affordable Hotel & Tour Packages
+                        </span>
+                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">The Enjoy Your Holidays</h1>
+                        <p class="hero-subtext" data-ani="slideindown" data-ani-delay="0.1s">HOTEL AND TOUR PACKAGES</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="as-hero-slide">
+            <div class="as-hero-bg" data-bg-src="/Content/assets/AYUSIMG/img6.jpg">
+
+            </div>
+            <div class="container">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="hero-style1">
+                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.1s">
+                            Best Budget Hotel
+                        </span>
+                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">The Best Budget Hotel</h1>
+                        <p class="hero-subtext" data-ani="slideindown" data-ani-delay="0.1s">HOTEL AND TOUR PACKAGES</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--==============================
+booking Area
+==============================-->
+@*<section class="">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12">
+                    <div class="booking-area">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="booking-area-item">
+                                    <div class="booking-icon-box">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <h3 class="booking-title">Arrival Date</h3>
+                                    </div>
+                                    <div class="booking-icon-box">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <h3 class="booking-title">Departure Date</h3>
+                                    </div>
+                                    <div class="booking-icon-box">
+                                        <i class="fa-solid fa-user"></i>
+                                        <h3 class="booking-title">Adults</h3>
+                                    </div>
+
+                                    <div class="booking-icon-box">
+                                        <i class="fa-solid fa-child"></i>
+                                        <h3 class="booking-title">Children</h3>
+                                    </div>
+                                </div>
+                                <form action="#">
+                                    <div class="booking-area-form">
+                                        <div class="booking-check">
+                                            <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="booking-check">
+                                            <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="contact-field">
+                                            <select name="adults" id="adu" class="form-select nice-select">
+                                                <option value="sports-massage">Adults</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div class="contact-field">
+                                            <select name="child" id="cld" class="form-select nice-select">
+                                                <option value="sports-massage">Child</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div class="booking-btn style1">
+                                            <a href="#" class="as-btn style2">Check Availability</a>
+                                            <div class="booking-icon-wrapper">
+                                                <div class="booking-icon-box style1">
+                                                    <i class="fa-sharp fa-solid fa-headset"></i>
+                                                    <h3 class="booking-title">Support</h3>
+                                                </div>
+                                                <div class="booking-icon-box style1">
+                                                    <i class="fa-regular fa-badge-check"></i>
+                                                    <h3 class="booking-title">Special Offer</h3>
+                                                    <div class="booking-small-wrapper">
+                                                        <div class="booking-wrpp">
+                                                            <div class="booking-small-box">
+                                                                <img src="/Content/assets/img/normal/s1.jpg" alt="">
+                                                                <p class="offer-title">
+                                                                    Spa <span class="offer-price">$100</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="booking-small-box">
+                                                                <img src="/Content/assets/img/normal/s2.jpg" alt="">
+                                                                <p class="offer-title">
+                                                                    Rooms <span class="offer-price">-30%</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="booking-small-box">
+                                                                <img src="/Content/assets/img/normal/s3.jpg" alt="">
+                                                                <p class="offer-title">
+                                                                    Rooms <span class="offer-price">-30%</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="booking-icon-box style1">
+                                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                                    <h3 class="booking-title">Location Distance</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+
+<!--==============================
+About Area
+==============================-->
+<div class="container">
+    <div class="space-top about-section-two choose-area">
+
+        <div class="row">
+
+
+            <div class="col-xl-6">
+                <div class="title-area mt-n1 mb-25 mr-50">
+                    <span class="sub-title">ABOUT US</span>
+                    <h4 class="sec-title"> The Best Hotel to Celebrate Life</h4>
+                    <p class="mt-n2 content-justify">
+                        Budget hotel in Delhi is dedicated and specially designs for best rate hotels in delhi. Our mission is to provide Quality and excellence to our customers promptly and exclusively.
+                        All the professionals at Budget hotel in Delhi are masters of their trade and each brings with him/her a unique set of experiences adding value to the customer overall satisfaction.
+
+                    </p>
+                </div>
+
+                <div class="about-btn">
+                    <a href="/About" class="as-btn">About More</a>
+                    <div class="about-info">
+                        <div class="about-info_icon style1">
+                            <a href="tel:+917004450098"><i class="fa-solid fa-phone"></i></a>
+                        </div>
+                        <div class="media-body">
+                            <span class="about-info_label">Call us anytime</span>
+                            <p class="about-info_link">
+                                <a href="tel:+91 7004450098">tel:+91 7004450098</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="img-box2">
+                    <div class="img2">
+                        <img class="image_1" src="~/Content/assets/img/normal/about_2.png" alt="About">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--==============================
+Hotel Area
+==============================-->
+<div class="bg-top-center space-bottom feature-section-2 overflow-hidden background-image" style="background-image: url(/Content/assets/img/bg/service_bg_1.jpg);">
+
+@*<div class="background-image" style="background-image: url( /Content/assets/img/Budget_hotel/BG.jpg);">*@
+    <div class="container">
+        <div class="row">
+            <div class="title-area mb-0 text-center">
+              
+                <h2 class="hotel-title">Our Best Hotels</h2>
+            </div>
+
+            <div>
+
+                <nav class="tablist">
+                    <div class="filter-menu nav nav-tabs" id="nav-tab" role="tablist">
+
+                        <button class=" active" id="nav-breakfast-tab" data-bs-toggle="tab" data-bs-target="#nav-breakfast" type="button" role="tab">  Budget Hotels </button>
+
+                        <button class="" id="nav-lunch-tab" data-bs-toggle="tab" data-bs-target="#nav-lunch" type="button" role="tab"> Deluxe Hotels  </button>
+
+                        <button class="" id="nav-dinner-tab " data-bs-toggle="tab" data-bs-target="#nav-dinner" type="button" role="tab"> Heritage Hotels   </button>
+
+
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container mt-3">
+
+        <div class="tab-content " id="nav-tabContent">
+
+            <div class="tab-pane slider-shadow show active fade" id="nav-breakfast" role="tabpanel">
+                <div class="row as-carousel" id="blogSlide1" data-slide-show="3" data-xl-slide-show="3"
+                     data-lg-slide-show="2" data-md-slide-show="1" data-sm-slide-show="1" data-arrows="true">
+
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+
+                                <img src="~/Content/assets/img/Budget_hotel/Sarang.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Hotel Sarang</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                                <img src="~/Content/assets/img/Budget_hotel/aryaniwas.jpg" alt="Service">
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html"> Hotel Arya Niwas</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+
+                                <img src="~/Content/assets/img/Budget_hotel/Sugan_NIwas.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Hotel Sugan Niwas</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                            
+                             
+                                <img src="~/Content/assets/img/Budget_hotel/glitzhotel.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Hotel Glitz</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane slider-shadow fade" id="nav-lunch" role="tabpanel">
+                <div class="row as-carousel" id="blogSlide1" data-slide-show="3" data-xl-slide-show="3"
+                     data-lg-slide-show="2" data-md-slide-show="1" data-sm-slide-show="1" data-arrows="true">
+
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                     
+                                <img src="~/Content/assets/img/Delux_hotel/four botique.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Hotel Four Botique</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                            
+                                <img src="~/Content/assets/img/Delux_hotel/hotelimtower.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Hotel Lime Tower</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                            
+                                <img src="~/Content/assets/img/Delux_hotel/Royalinn.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Hotel Royal</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                               
+                                <img src="~/Content/assets/img/Delux_hotel/Sarovor_hotel.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Hotel Sarovor</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="tab-pane slider-shadow fade" id="nav-dinner" role="tabpanel">
+                <div class="row as-carousel" id="blogSlide1" data-slide-show="3" data-xl-slide-show="3"
+                     data-lg-slide-show="2" data-md-slide-show="1" data-sm-slide-show="1" data-arrows="true">
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                                <img src="~/Content/assets/img/HeritageHotels/Alsisar Haveli (5).jpg" />
+                                
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Alsisar Haveli</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                              
+                                <img src="~/Content/assets/img/HeritageHotels/Bissau_palace.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Bissau Palace</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+                                <img src="~/Content/assets/img/HeritageHotels/Castle_kanota.jpg" />
+                                
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Castle Kanota</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="service-card-two style3 mb-24 mt-0">
+                            <div class="service-card_img">
+
+                                <img src="~/Content/assets/img/HeritageHotels/Umaid Bhawan.jpg" />
+                            </div>
+
+
+                            <div class="service-card_content-two">
+                                <div>
+                                    <div class="service-price">
+                                        <span class="service-card_subtitle">PRICE $120.00 </span>
+                                        <div class="service-star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="service-card_title">
+                                        <a href="service-details.html">Umaid Bhawan</a>
+                                    </h5>
+                                </div>
+
+                                <div class="service-wrapper">
+                                    <a href="/Details" class="line-btn style3">VIEW DETAILS</a>
+                                    <a href="/Contact" class="line-btn">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="service-description mt-50 mb-n1 text-center">
+        <span class="ser-title">SEE Our All Hotels</span><a href="/HotelList"> Browse All  Hotels  </a>
+    </div>
+</div>
+
+<!--==============================
+know ABout Delhi
+==============================-->
+
+<section id="gallery" class="gallery-section">
+    <div class="container">
+
+        <div class="gallery-content">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="gallery-slide-wrapp">
+                        <div class="gallery-slide as-carousel" id="gallerySlide1" data-slide-show="1">
+                            <div>
+
+                                <div class="gallery-slider-img">
+                                    <img src="~/Content/assets/img/Destination/img1.jpg" class="img-fluid">
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="gallery-slider-img">
+                                    <img src="~/Content/assets/img/Destination/img2.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="gallery-slider-img">
+                                    <img src="~/Content/assets/img/Destination/img3.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="gallery-slider-img">
+                                    <img src="~/Content/assets/img/Destination/img4.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="gallery-slider-img">
+                                    <img src="~/Content/assets/img/Destination/img5.jpg" class="img-fluid">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="icon-box">
+                            <button data-slick-prev="#gallerySlide1" class="slick-arrow default1">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                            <button data-slick-next="#gallerySlide1" class="slick-arrow default2">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tabs-thumb tab-menu1" data-asnavfor=".gallery-slide">
+                        <button class="tab-btn active">
+                            <img src="~/Content/assets/img/Destination/img1.jpg"
+                                 class="img-fluid">
+                        </button>
+                        <button class="tab-btn">
+                            <img src="~/Content/assets/img/Destination/img2.jpg"
+                                 class="img-fluid">
+                        </button>
+                        <button class="tab-btn">
+                            <img src="~/Content/assets/img/Destination/img3.jpg"
+                                 class="img-fluid">
+                        </button>
+                        <button class="tab-btn">
+                            <img src="~/Content/assets/img/Destination/img4.jpg"
+                                 class="img-fluid">
+                        </button>
+                        <button class="tab-btn">
+                            <img src="~/Content/assets/img/Destination/img5.jpg"
+                                 class="img-fluid">
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="countdown-area ml-50">
+                        <div class="title-area mb-40">
+                            <h3 class="sec-title">Know More About Delhi </h3>
+                            <p class="">
+                                Delhi is love, Delhi is haste, Delhi is serene, Delhi is chaos - It is the yang to its own yin. Delhi is a complete deal!
+                                From the bustling lanes of Chandni Chowk to the serene and tranquil abode of Bangla Sahib,
+                                Delhi makes a complete circle of life.
+
+                            </p>
+                            <p class="mt-2">
+                                One of the most popular tourist destinations in India,
+                                the city has been thriving because of the abundant diversity. Right from stepping out of New Delhi Railway Station...
+
+                            </p>
+
+                        </div>
+
+                        <div class="room-btn">
+                            <a href="/AboutDelhi" class="as-btn style5 shadow-none" tabindex="-1">KNOW MORE...</a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--==============================
+Tour Packages
+==============================-->
+<section class="room-section-two  space">
+    <div class="container">
+        <div class="room-area-wrapper">
+            <div class="title-area mb-30 mt-n1">
+                <span class="sub-title">TOUR PACKAGES</span>
+                <h2 class="sec-title mb-0">Our Best Tour Packages</h2>
+            </div>
+            <div class="room-btn">
+                <a href="/TourPackages" class="as-btn style5 shadow-none" tabindex="-1">Browse All Tour Packages</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="service-card-two style3 mb-24 mt-0">
+                    <div class="service-card_img">
+                        <img src="~/Content/assets/AYUSIMG/tour package1.jpg" alt="Tour Packages" />
+                    </div>
+
+               
+                    <div class="service-card_content-two">
+                        <div>
+                            <div class="service-price">
+                                <span class="service-card_subtitle">PRICE $120.00 </span>
+                                <div class="service-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+
+                            
+                            <h5 class="service-card_title">
+                                <a href="/TourPackages">AGRA TOUR</a>
+                            </h5>
+                        </div>
+
+                        <div class="service-wrapper">
+                            <a href="/TourPackages" class="line-btn style3">VIEW DETAILS</a>
+                            <a href="/Contact" class="line-btn">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="service-card-two style3 mb-24 mt-0">
+                    <div class="service-card_img">
+                        <img src="/Content/assets/MONIKAimg/udaipur2.jpg" alt="Tour Packages" />
+                    </div>
+                    <div class="service-card_content-two">
+                        <div>
+                            <div class="service-price">
+                                <span class="service-card_subtitle">PRICE $120.00 </span>
+                                <div class="service-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h5 class="service-card_title">
+                                <a href="/TourPackages">DELHI UDAIUPUR TOUR</a></h5>
+                        </div>
+
+                        <div class="service-wrapper">
+                            <a href="/TourPackages" class="line-btn style3">VIEW DETAILS</a>
+                            <a href="/Contact" class="line-btn">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="service-card-two style3 mb-24 mt-0">
+                    <div class="service-card_img">
+                        <img src="/Content/assets/MONIKAimg/shimla1.jpg" alt="Tour Packages" />
+                    </div>
+                    <div class="service-card_content-two">
+                        <div>
+                            <div class="service-price">
+                                <span class="service-card_subtitle">PRICE $120.00 </span>
+                                <div class="service-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h5 class="service-card_title">
+                                <a href="/TourPackages">SHIMLA TOUR</a>
+                            </h5>
+                        </div>
+
+                        <div class="service-wrapper">
+                            <a href="/TourPackages" class="line-btn style3">VIEW DETAILS</a>
+                            <a href="/Contact" class="line-btn">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="service-card-two style3 mb-24 mt-0">
+                    <div class="service-card_img">
+                        <img src="/Content/assets/MONIKAimg/manali2.jpg" alt="Tour Packages" />
+                    </div>
+                    <div class="service-card_content-two">
+                        <div>
+                            <div class="service-price">
+                                <span class="service-card_subtitle">PRICE $120.00 </span>
+                                <div class="service-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h5 class="service-card_title">
+                                <a href="/TourPackages">MANALI TOUR</a>
+                            </h5>
+                        </div>
+
+                        <div class="service-wrapper">
+                            <a href="/TourPackages" class="line-btn style3">VIEW DETAILS</a>
+                            <a href="/Contact" class="line-btn">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+<!--==============================
+TOP DESTINATION
+==============================-->
+<section class=" container space-bottom" id="blog-sec">
+    <div class="container_blog">
+        <div class="room-area-wrapper">
+            <div class="title-area mb-30 mt-n1">
+                <span class="sub-title">TOP DESTINATION</span>
+                <h2 class="sec-title">PLACES TO VISIT IN DELHI</h2>
+            </div>
+            <div class="room-btn">
+                <a href="/TopDestination" class="as-btn style5 shadow-none" tabindex="-1">Browse All  Top Destination</a>
+            </div>
+        </div>
+
+
+        <div class="row slider-shadow as-carousel blog-area" id="blogSlide1" data-slide-show="3"
+             data-xl-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2" data-sm-slide-show="1"
+             data-arrows="true">
+            <div class="col-lg-6 col-xl-4">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <div class="blog-img">
+                            <img src="/Content/assets/img/Destination/img1.jpg" alt="blog image">
+                        </div>
+                    </div>
+                    <div class="blog-box_content">
+                        <h3 class="blog-title box-title">
+                            RED FORT
+                        </h3>
+                        @*<div class="blog-meta-wrapper">
+                                <a href="blog.html"><i class="fa-regular fa-clock"></i>25 July, 2023</a>
+                                <a href="blog.html"><i class="fa-regular fa-user"></i>by David Smith</a>
+                            </div>*@
+                        <div class="blog-btn">
+                            <a href="/TopDestination" class="line-btn">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <div class="blog-img">
+                            <img src="/Content/assets/img/Destination/img2.jpg" alt="blog image">
+                        </div>
+                    </div>
+                    <div class="blog-box_content">
+                        <h3 class="blog-title box-title"> INDIA GATE</h3>
+                        @*<div class="blog-meta-wrapper">
+                                <a href="blog.html"><i class="fa-regular fa-clock"></i>25 July, 2023</a>
+                                <a href="blog.html"><i class="fa-regular fa-user"></i>by David Smith</a>
+                            </div>*@
+                        <div class="blog-btn">
+                            <a href="/TopDestination" class="line-btn">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <div class="blog-img">
+                            <img src="/Content/assets/img/Destination/img3.jpg" alt="blog image">
+                        </div>
+                    </div>
+                    <div class="blog-box_content">
+                        <h3 class="blog-title box-title"> QUTUB MINAR</h3>
+                        @*<div class="blog-meta-wrapper">
+                                <a href="blog.html"><i class="fa-regular fa-clock"></i>20 Jun, 2023</a>
+                                <a href="blog.html"><i class="fa-regular fa-user"></i>by David Smith</a>
+                            </div>*@
+                        <div class="blog-btn">
+                            <a href="/TopDestination" class="line-btn">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <div class="blog-img">
+                            <img src="/Content/assets/img/Destination/img6.jpg" alt="blog image">
+                        </div>
+                    </div>
+                    <div class="blog-box_content">
+                        <h3 class="blog-title box-title"> LOTUS TEMPLE</h3>
+                        @*<div class="blog-meta-wrapper">
+                                <a href="blog.html"><i class="fa-regular fa-clock"></i>20 , jun 2023</a>
+                                <a href="blog.html"><i class="fa-regular fa-user"></i>by David Smith</a>
+                            </div>*@
+                        <div class="blog-btn">
+                            <a href="/TopDestination" class="line-btn">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!--==============================
+  Testimonial Area
+  ==============================-->
+    <div class="container bg-smoke">
+        <div class="title-area mt-n1 text-center">
+            <span class="sub-title">Testimonials</span>
+            <h2 class="sec-title">What Client Say</h2>
+        </div>
+        <div class="row as-carousel slider-shadow " data-slide-show="2" data-lg-slide-show="2" data-md-slide-show="1"
+             data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true">
+            <div>
+                <div class="testi-card">
+                    <div class="testi-content">
+                        <div class="testi-box-wrapper">
+                            <div class="testi-box_avater">
+
+                                <img src="/Content/assets/AYUSIMG/Avatar1.png" alt="testimonial" />
+                            </div>
+                            <p class="testi-box_text content-justify">
+                                An extremely well organised and maintained hotels with very high standards of professionalism. The place is very cosy and comfortable.
+                                The performance by the team and their associates has been outstanding in every regard. We appreciate your professionalism, your sensitivity to our needs.
+                            </p>
+
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testi-box_profile">
+                                <div class="media-body">
+                                    <h3 class="testi-box_name h6">Client 1</h3>
+                                    <span class="testi-box_desig"></span>
+                                </div>
+                            </div>
+                            <div class="star-icon">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-regular fa-star"></i></a>
+                                <a href="#"><i class="fa-regular fa-star"></i></a>
+                                <span class="ratting">(4.7)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="testi-card">
+                    <div class="testi-content">
+                        <div class="testi-box-wrapper">
+                            <div class="testi-box_avater">
+
+                                <img src="/Content/assets/AYUSIMG/Avatar2.png" alt="testimonial" />
+                            </div>
+                            <p class="testi-box_text content-justify">
+                                An extremely well organised and maintained hotels with very high standards of professionalism. The place is very cosy and comfortable.The performance by the team
+                                and their associates has been outstanding in every regard. We appreciate your professionalism, your sensitivity to our needs.
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testi-box_profile">
+                                <div class="media-body">
+                                    <h3 class="testi-box_name h6">Client 2</h3>
+                                    <span class="testi-box_desig"></span>
+                                </div>
+                            </div>
+                            <div class="star-icon">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-regular fa-star"></i></a>
+                                <a href="#"><i class="fa-regular fa-star"></i></a>
+                                <span class="ratting">(4.7)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="testi-card">
+                    <div class="testi-content">
+                        <div class="testi-box-wrapper">
+                            <div class="testi-box_avater">
+
+                                <img src="/Content/assets/AYUSIMG/Avatar3.png" alt="testimonial" />
+                            </div>
+                            <p class="testi-box_text content-justify">
+                                An extremely well organised and maintained hotels with very high standards of professionalism. The place is very cosy and comfortable.The performance by the team
+                                and their associates has been outstanding in every regard. We appreciate your professionalism, your sensitivity to our needs,
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testi-box_profile">
+                                <div class="media-body">
+                                    <h3 class="testi-box_name h6">Client 3</h3>
+                                    <span class="testi-box_desig"></span>
+                                </div>
+                            </div>
+                            <div class="star-icon">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-regular fa-star"></i></a>
+                                <a href="#"><i class="fa-regular fa-star"></i></a>
+                                <span class="ratting">(4.7)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--==============================
+    Gallery 3 Area
+    ==============================-->
+    @*<section class="gallery-section-three space " id="gallery-sec">
+
+            <div class="container">
+                <div class=" gallery-section-three as-container5" id="gallery-sec">
+                    <div class="title-area mb-30 mt-n1">
+                        <span class="sub-title">Image of Our Hotels</span>
+                        <h2 class="sec-title">Checkout Our Gallery</h2>
+                    </div>
+                </div>
+                <div class="as-container5">
+                    <div class="row as-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2"
+                         data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true" data-focuson-select="false">
+
+                        <div class="col-md-4 col-xl-auto ">
+                            <div class="gallery-card style3">
+                                <div class="gallery-card_img">
+                                    <div class="gallery-overlay"></div>
+                                    <img src="~/Content/assets/MONIKAimg/hotel1.jpg" alt="gallery">
+                                </div>
+                                <a href="~/Content/assets/MONIKAimg/hotel1.jpg" class="icon-btn popup-image">
+                                    <i class="fa-solid fa-arrows-maximize"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 col-xl-auto ">
+                            <div class="gallery-card style3">
+                                <div class="gallery-card_img">
+                                    <div class="gallery-overlay"></div>
+                                    <img src="~/Content/assets/MONIKAimg/hotel10.jpg" alt="gallery">
+                                </div>
+                                <a href="~/Content/assets/MONIKAimg/hotel10.jpg" class="icon-btn popup-image">
+                                    <i class="fa-solid fa-arrows-maximize"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-xl-auto ">
+                            <div class="gallery-card style3">
+                                <div class="gallery-card_img">
+                                    <div class="gallery-overlay"></div>
+                                    <img src="~/Content/assets/MONIKAimg/hotel11.jpg" alt="gallery">
+                                </div>
+                                <a href="~/Content/assets/MONIKAimg/hotel11.jpg" class="icon-btn popup-image">
+                                    <i class="fa-solid fa-arrows-maximize"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 col-xl-auto ">
+                            <div class="gallery-card style3">
+                                <div class="gallery-card_img">
+                                    <div class="gallery-overlay"></div>
+                                    <img src="~/Content/assets/MONIKAimg/hotel12.jpg" alt="gallery">
+                                </div>
+                                <a href="~/Content/assets/MONIKAimg/hotel12.jpg" class="icon-btn popup-image">
+                                    <i class="fa-solid fa-arrows-maximize"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-xl-auto ">
+                            <div class="gallery-card style3">
+                                <div class="gallery-card_img">
+                                    <div class="gallery-overlay"></div>
+                                    <img src="~/Content/assets/MONIKAimg/hotel13.jpg" alt="gallery">
+                                </div>
+                                <a href="~/Content/assets/MONIKAimg/hotel13.jpg" class="icon-btn popup-image">
+                                    <i class="fa-solid fa-arrows-maximize"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-auto ">
+                            <div class="gallery-card style3">
+                                <div class="gallery-card_img">
+                                    <div class="gallery-overlay"></div>
+                                    <img src="~/Content/assets/MONIKAimg/hotel15.jpg" alt="gallery">
+                                </div>
+                                <a href="~/Content/assets/MONIKAimg/hotel15.jpg" class="icon-btn popup-image">
+                                    <i class="fa-solid fa-arrows-maximize"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>*@
+
+
+    <!--==============================
+    Contact 2 Area
+    ==============================-->
+    <section class="space-top" id="HomeContact">
+        @*<div class="container  mb-25">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="title-area mt-n1 mb-25 mr-50">
+                            <span class="sub-title">Contact Us</span>
+                            <h4>  If You Wish To Learn More Ask Before Booking.</h4>
+                            <p class="mt-n2 mb-10 content-justify">
+                                Phosfluorescently communicate e-business results for orthogonal
+                                potentialities. Globally envisioneer state of the art resources for market positioning niches.
+                                Uniquely impact. Proactively matrix inexpensive opportunities for technically.
+                            </p>
+                        </div>
+
+
+
+
+                        <div class="contact-icon">
+                            <a href="tel:(+187) 565-425-46" class="play-btn"><i class="fa-solid fa-phone"></i></a>
+                            <a href="tel:(+187) 565-425-46" class="play-text">(+163)-1202-0099</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form action="#" method="POST" class="contact-form style4 ajax-contact">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <i class="fal fa-user"></i>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <i class="fal fa-envelope"></i>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                           placeholder="Your email">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                    <input type="text" class="form-control" name="text" id="text"
+                                           placeholder="subject">
+                                </div>
+                                <div class="form-group col-12">
+                                    <i class="fa-thin fa-pencil"></i>
+                                    <textarea name="message" id="message" cols="30" rows="3" class="form-control style3"
+                                              placeholder="write Message"></textarea>
+
+                                </div>
+                                <div class="form-btn col-12 text-center">
+                                    <button class="as-btn shadow-none">submit now</button>
+                                </div>
+                            </div>
+                            <p class="form-messages mb-0 mt-3"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>*@
+        <div class=" reservation-area background-image" style="background-image: url(/Content/assets/img/bg/reservation_bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="title-area text-center">
+                        <span class="sub-title">Contact Us </span>
+                        <h2 class="sec-title mb-0">Make Enquiry</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <form action="https://angfuzsoft.com/html/hibtel/demo/mail.php" method="POST" class="reservation-form ajax-contact">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <i class="fal fa-user"></i>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <i class="fal fa-envelope"></i>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <i class="fa-regular fa-phone"></i>
+                                    <input type="tel" class="form-control" name="number" id="number" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" name="Subjecr" id="Subject" placeholder="Query Topic">
+                                    @*<select name="subject" id="subject" class="form-dropdown nice-select">
+                                            <option value="" disabled selected hidden>Select Queary Topic</option>
+                                            <option value="Web Development">Queary Topic 1</option>
+                                            <option value="Brand Marketing">Queary Topic 2</option>
+                                            <option value="UI/UX Designing">Queary Topic 3</option>
+                                            <option value="Digital Marketing">Queary Topic 4</option>
+                                        </select>*@
+                                </div>
+                                <div class="form-group col-12">
+                                    <i class="fa-thin fa-pencil"></i>
+                                    <textarea name="message" id="message" cols="30" rows="3" class="form-control style3" placeholder="Write Message"></textarea>
+
+                                </div>
+                                <div class="form-btn col-12 text-center">
+                                    <button class="as-btn shadow-none">Send Message Now</button>
+                                </div>
+                            </div>
+                            <p class="form-messages mb-0 mt-3"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+

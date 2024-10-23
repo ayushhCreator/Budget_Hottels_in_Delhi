@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{614D1CB3-E7BA-40E1-9774-C275DDE40FF9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Budget_hotels_In_Delhi</RootNamespace>
+    <AssemblyName>Budget_hotels_In_Delhi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44319</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dotplus.Database.StoreProcedure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotplusDatabase.1.0.1\lib\net472\Dotplus.Database.StoreProcedure.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor, Version=2.9.1.225, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.2.9.1\lib\net452\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor.Web, Version=4.12.1.216, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.Web.4.12.1\lib\net452\ImageProcessor.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.2.2\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_HotelList.cs" />
+    <Compile Include="Models\tbl_TourPackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\AYUSIMG\3.png" />
+    <Content Include="Content\assets\AYUSIMG\4.png" />
+    <Content Include="Content\assets\AYUSIMG\AGRA %281%29.jpg" />
+    <Content Include="Content\assets\AYUSIMG\AGRA %282%29.jpg" />
+    <Content Include="Content\assets\AYUSIMG\AGRA %283%29.jpg" />
+    <Content Include="Content\assets\AYUSIMG\AGRA4.jpg" />
+    <Content Include="Content\assets\AYUSIMG\Avatar1.png" />
+    <Content Include="Content\assets\AYUSIMG\Avatar2.png" />
+    <Content Include="Content\assets\AYUSIMG\Avatar3.png" />
+    <Content Include="Content\assets\AYUSIMG\breadcrumb2 .png" />
+    <Content Include="Content\assets\AYUSIMG\breadcrumb.png" />
+    <Content Include="Content\assets\AYUSIMG\BREADCRUMB2.png" />
+    <Content Include="Content\assets\AYUSIMG\Budget hotel.png" />
+    <Content Include="Content\assets\AYUSIMG\hotel.jpg" />
+    <Content Include="Content\assets\AYUSIMG\img1.jpg" />
+    <Content Include="Content\assets\AYUSIMG\img2.jpg" />
+    <Content Include="Content\assets\AYUSIMG\img3.jpg" />
+    <Content Include="Content\assets\AYUSIMG\img4.png" />
+    <Content Include="Content\assets\AYUSIMG\img6.jpg" />
+    <Content Include="Content\assets\AYUSIMG\logogo.png" />
+    <Content Include="Content\assets\AYUSIMG\Budgethotellogob.png" />
+    <Content Include="Content\assets\AYUSIMG\tour package1.jpg" />
+    <Content Include="Content\assets\css\bootstrap.min.css" />
+    <Content Include="Content\assets\css\datetimepicker.min.css" />
+    <Content Include="Content\assets\css\fontawesome.min.css" />
+    <Content Include="Content\assets\css\magnific-popup.min.css" />
+    <Content Include="Content\assets\css\slick.min.css" />
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\C_image\logo\budgets_hotel_in_Delhi-w.png" />
+    <Content Include="Content\assets\C_image\logo\budgets_hotel_in_Delhi.png" />
+    <Content Include="Content\assets\C_image\logo\favicon.png" />
+    <Content Include="Content\assets\img\bg\about_bg.png" />
+    <Content Include="Content\assets\img\bg\counter_bg_1.png" />
+    <Content Include="Content\assets\img\bg\counter_bg_2.png" />
+    <Content Include="Content\assets\img\bg\footer_bg_1.png" />
+    <Content Include="Content\assets\img\bg\hotel_bg.jpg" />
+    <Content Include="Content\assets\img\bg\menu_bg.png" />
+    <Content Include="Content\assets\img\bg\reservation_bg.jpg" />
+    <Content Include="Content\assets\img\bg\service_bg.jpg" />
+    <Content Include="Content\assets\img\bg\service_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\service_bg_3.jpg" />
+    <Content Include="Content\assets\img\bg\subscribe_bg_1.jpg" />
+    <Content Include="Content\assets\img\bg\testimonial_bg_2.jpg" />
+    <Content Include="Content\assets\img\bg\video_bg_1.jpg" />
+    <Content Include="Content\assets\img\blog\author_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-1.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-2.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-3.jpg" />
+    <Content Include="Content\assets\img\blog\blog-s-1-4.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_2.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_3.jpg" />
+    <Content Include="Content\assets\img\blog\blog_1_4.jpg" />
+    <Content Include="Content\assets\img\blog\blog_3_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_3_2.jpg" />
+    <Content Include="Content\assets\img\blog\blog_3_3.jpg" />
+    <Content Include="Content\assets\img\blog\blog_inner_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_inner_2.jpg" />
+    <Content Include="Content\assets\img\blog\blog_thumb_1.jpg" />
+    <Content Include="Content\assets\img\blog\blog_thumb_2.jpg" />
+    <Content Include="Content\assets\img\blog\blog_thumb_3.jpg" />
+    <Content Include="Content\assets\img\blog\box-dot.png" />
+    <Content Include="Content\assets\img\blog\comment-author-1.jpg" />
+    <Content Include="Content\assets\img\blog\comment-author-2.jpg" />
+    <Content Include="Content\assets\img\blog\comment-author-3.jpg" />
+    <Content Include="Content\assets\img\blog\next.jpg" />
+    <Content Include="Content\assets\img\blog\prev.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-1.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-2.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-3.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-4.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-1-5.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-2-1.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-2-2.jpg" />
+    <Content Include="Content\assets\img\blog\recent-post-2-3.jpg" />
+    <Content Include="Content\assets\img\breadcumb\breadcumb-bg.jpg" />
+    <Content Include="Content\assets\img\Budget_hotel\BG.jpg" />
+    <Content Include="Content\assets\img\Budget_hotel\Royal Orchids.jpg" />
+    <Content Include="Content\assets\img\Budget_hotel\Sugan_NIwas.jpg" />
+    <Content Include="Content\assets\img\crimg\cr1 %281%29.jpg" />
+    <Content Include="Content\assets\img\crimg\cr1 %282%29.jpg" />
+    <Content Include="Content\assets\img\crimg\cr1 %283%29.jpg" />
+    <Content Include="Content\assets\img\crimg\cr1 %284%29.jpg" />
+    <Content Include="Content\assets\img\crimg\cr1 %285%29.jpg" />
+    <Content Include="Content\assets\img\crimg\cr1 %286%29.jpg" />
+    <Content Include="Content\assets\img\delimg\del %282%29.jpg" />
+    <Content Include="Content\assets\img\delimg\del%281%29.jpg" />
+    <Content Include="Content\assets\img\delimg\del%283%29.jpg" />
+    <Content Include="Content\assets\img\delimg\del%284%29.jpg" />
+    <Content Include="Content\assets\img\delimg\del%285%29.jpg" />
+    <Content Include="Content\assets\img\delimg\del%286%29.jpg" />
+    <Content Include="Content\assets\img\delimg\delcol%283%29.jpg" />
+    <Content Include="Content\assets\img\delimg\delcol%284%29.jpg" />
+    <Content Include="Content\assets\img\delimg\delcol%285%29 %281%29.png" />
+    <Content Include="Content\assets\img\delimg\delcol1 %281%29.jpg" />
+    <Content Include="Content\assets\img\delimg\delcol1 %282%29.jpg" />
+    <Content Include="Content\assets\img\Delux_hotel\four botique.jpg" />
+    <Content Include="Content\assets\img\Delux_hotel\hotelimtower.jpg" />
+    <Content Include="Content\assets\img\Delux_hotel\mansighhotel.jpg" />
+    <Content Include="Content\assets\img\Delux_hotel\milstone.jpg" />
+    <Content Include="Content\assets\img\Delux_hotel\Royalinn.jpg" />
+    <Content Include="Content\assets\img\Delux_hotel\Sarovor_hotel.jpg" />
+    <Content Include="Content\assets\img\Destination\img1.jpg" />
+    <Content Include="Content\assets\img\Destination\img10.jpg" />
+    <Content Include="Content\assets\img\Destination\img11.jpg" />
+    <Content Include="Content\assets\img\Destination\img12.jpg" />
+    <Content Include="Content\assets\img\Destination\img13.jpg" />
+    <Content Include="Content\assets\img\Destination\img14.jpg" />
+    <Content Include="Content\assets\img\Destination\img15.jpg" />
+    <Content Include="Content\assets\img\Destination\img2.jpg" />
+    <Content Include="Content\assets\img\Destination\img3.jpg" />
+    <Content Include="Content\assets\img\Destination\img4.jpg" />
+    <Content Include="Content\assets\img\Destination\img5.jpg" />
+    <Content Include="Content\assets\img\Destination\img6.jpg" />
+    <Content Include="Content\assets\img\Destination\img7.jpg" />
+    <Content Include="Content\assets\img\Destination\img8.jpg" />
+    <Content Include="Content\assets\img\Destination\img9.jpg" />
+    <Content Include="Content\assets\img\favicons\android-icon-192x192.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-114x114.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-120x120.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-144x144.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-152x152.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-180x180.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-57x57.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-60x60.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-72x72.png" />
+    <Content Include="Content\assets\img\favicons\apple-icon-76x76.png" />
+    <Content Include="Content\assets\img\favicons\favicon-16x16.png" />
+    <Content Include="Content\assets\img\favicons\favicon-32x32.png" />
+    <Content Include="Content\assets\img\favicons\favicon-96x96.png" />
+    <Content Include="Content\assets\img\favicons\ms-icon-144x144.png" />
+    <Content Include="Content\assets\img\gallery\gallery_1_1.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_1_2.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_1_3.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_1_4.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_1_5.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_2_1.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_2_2.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_2_3.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_2_4.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_2_5.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_1.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_2.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_3.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_4.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_5.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_6.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_7.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_8.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_3_9.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_4_1.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_4_2.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_4_3.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_4_4.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_5_1.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_5_2.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_5_3.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_5_4.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_5_5.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_5_6.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_6_1.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_6_2.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery_6_3.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %281%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %2810%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %2811%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %282%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %283%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %284%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %285%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %286%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %287%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %288%29.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Alsisar Haveli %289%29.jpg" />
+    <Content Include="Content\assets\img\Budget_hotel\aryaniwas.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Bissau_palace.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Castle_kanota.jpg" />
+    <Content Include="Content\assets\img\Budget_hotel\glitzhotel.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\jaipur-heritage-hotel.jpg" />
+    <Content Include="Content\assets\img\Budget_hotel\nahargarhhaveli.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Raj_Palace_HOtel.jpg" />
+    <Content Include="Content\assets\img\Budget_hotel\Sarang.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Standard Single Room1.jpg" />
+    <Content Include="Content\assets\img\HeritageHotels\Umaid Bhawan.jpg" />
+    <Content Include="Content\assets\img\hero\bg_shape.png" />
+    <Content Include="Content\assets\img\hero\hero_bg_1_1.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_1_2.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_1_3.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_2_1.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_2_2.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_2_3.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_3_1.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_4_1.jpg" />
+    <Content Include="Content\assets\img\hero\hero_bg_4_2.jpg" />
+    <Content Include="Content\assets\img\hero\next.jpg" />
+    <Content Include="Content\assets\img\hero\prev.jpg" />
+    <Content Include="Content\assets\img\icon\1.svg" />
+    <Content Include="Content\assets\img\icon\air.svg" />
+    <Content Include="Content\assets\img\icon\air_1.svg" />
+    <Content Include="Content\assets\img\icon\bathroom.svg" />
+    <Content Include="Content\assets\img\icon\bathroom_1.svg" />
+    <Content Include="Content\assets\img\icon\bed.svg" />
+    <Content Include="Content\assets\img\icon\car.svg" />
+    <Content Include="Content\assets\img\icon\drimon.svg" />
+    <Content Include="Content\assets\img\icon\event.svg" />
+    <Content Include="Content\assets\img\icon\guest.svg" />
+    <Content Include="Content\assets\img\icon\gym.svg" />
+    <Content Include="Content\assets\img\icon\gym_1.svg" />
+    <Content Include="Content\assets\img\icon\parking.svg" />
+    <Content Include="Content\assets\img\icon\resturant.svg" />
+    <Content Include="Content\assets\img\icon\resturant_1.svg" />
+    <Content Include="Content\assets\img\icon\saving.svg" />
+    <Content Include="Content\assets\img\icon\shower.svg" />
+    <Content Include="Content\assets\img\icon\single_wifi.svg" />
+    <Content Include="Content\assets\img\icon\small-rocket.svg" />
+    <Content Include="Content\assets\img\icon\spa.svg" />
+    <Content Include="Content\assets\img\icon\spa_1.svg" />
+    <Content Include="Content\assets\img\icon\suite.svg" />
+    <Content Include="Content\assets\img\icon\swimming-pool.svg" />
+    <Content Include="Content\assets\img\icon\swimming.svg" />
+    <Content Include="Content\assets\img\icon\swimming_1.svg" />
+    <Content Include="Content\assets\img\icon\trail.svg" />
+    <Content Include="Content\assets\img\icon\tv.svg" />
+    <Content Include="Content\assets\img\icon\vision.svg" />
+    <Content Include="Content\assets\img\icon\wifi.svg" />
+    <Content Include="Content\assets\img\icon\wifi_1.svg" />
+    <Content Include="Content\assets\img\logo-black.svg" />
+    <Content Include="Content\assets\img\logo-red.svg" />
+    <Content Include="Content\assets\img\logo.svg" />
+    <Content Include="Content\assets\img\menu\menu_1_1.jpg" />
+    <Content Include="Content\assets\img\menu\menu_1_2.jpg" />
+    <Content Include="Content\assets\img\menu\menu_1_3.jpg" />
+    <Content Include="Content\assets\img\menu\menu_1_4.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_1.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_2.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_3.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_4.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_5.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_6.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_7.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_8.jpg" />
+    <Content Include="Content\assets\img\menu\menu_2_9.jpg" />
+    <Content Include="Content\assets\img\normal\about_1.png" />
+    <Content Include="Content\assets\img\normal\about_2.png" />
+    <Content Include="Content\assets\img\normal\about_3.png" />
+    <Content Include="Content\assets\img\normal\about_4.png" />
+    <Content Include="Content\assets\img\normal\bar.jpg" />
+    <Content Include="Content\assets\img\normal\breakfast.jpg" />
+    <Content Include="Content\assets\img\normal\business.jpg" />
+    <Content Include="Content\assets\img\normal\casino.jpg" />
+    <Content Include="Content\assets\img\normal\choose_1.jpg" />
+    <Content Include="Content\assets\img\normal\choose_1.png" />
+    <Content Include="Content\assets\img\normal\choose_3.jpg" />
+    <Content Include="Content\assets\img\normal\cta_1_1.jpg" />
+    <Content Include="Content\assets\img\normal\cta_1_2.jpg" />
+    <Content Include="Content\assets\img\normal\gym.jpg" />
+    <Content Include="Content\assets\img\normal\history_1_1.jpg" />
+    <Content Include="Content\assets\img\normal\history_1_2.jpg" />
+    <Content Include="Content\assets\img\normal\history_1_3.jpg" />
+    <Content Include="Content\assets\img\normal\history_1_4.jpg" />
+    <Content Include="Content\assets\img\normal\hotal_ex_1.jpg" />
+    <Content Include="Content\assets\img\normal\hotal_ex_2.jpg" />
+    <Content Include="Content\assets\img\normal\hotal_ex_3.jpg" />
+    <Content Include="Content\assets\img\normal\hotel_1.jpg" />
+    <Content Include="Content\assets\img\normal\review.jpg" />
+    <Content Include="Content\assets\img\normal\s1.jpg" />
+    <Content Include="Content\assets\img\normal\s2.jpg" />
+    <Content Include="Content\assets\img\normal\s3.jpg" />
+    <Content Include="Content\assets\img\normal\service.jpg" />
+    <Content Include="Content\assets\img\normal\spa.jpg" />
+    <Content Include="Content\assets\img\normal\swimming.jpg" />
+    <Content Include="Content\assets\img\normal\video_1.jpg" />
+    <Content Include="Content\assets\img\normal\video_2.jpg" />
+    <Content Include="Content\assets\img\normal\video_3.jpg" />
+    <Content Include="Content\assets\img\normal\wifi.jpg" />
+    <Content Include="Content\assets\img\service\service_1_1.jpg" />
+    <Content Include="Content\assets\img\service\service_1_2.jpg" />
+    <Content Include="Content\assets\img\service\service_1_3.jpg" />
+    <Content Include="Content\assets\img\service\service_1_4.jpg" />
+    <Content Include="Content\assets\img\service\service_2_1.jpg" />
+    <Content Include="Content\assets\img\service\service_2_2.jpg" />
+    <Content Include="Content\assets\img\service\service_2_3.jpg" />
+    <Content Include="Content\assets\img\service\service_2_4.jpg" />
+    <Content Include="Content\assets\img\service\service_2_5.jpg" />
+    <Content Include="Content\assets\img\service\service_3_1.jpg" />
+    <Content Include="Content\assets\img\service\service_3_2.jpg" />
+    <Content Include="Content\assets\img\service\service_3_3.jpg" />
+    <Content Include="Content\assets\img\service\service_3_4.jpg" />
+    <Content Include="Content\assets\img\service\service_3_5.jpg" />
+    <Content Include="Content\assets\img\service\service_3_6.jpg" />
+    <Content Include="Content\assets\img\service\service_4_1.jpg" />
+    <Content Include="Content\assets\img\service\service_4_2.jpg" />
+    <Content Include="Content\assets\img\service\service_4_3.jpg" />
+    <Content Include="Content\assets\img\service\service_4_4.jpg" />
+    <Content Include="Content\assets\img\service\service_4_5.jpg" />
+    <Content Include="Content\assets\img\service\service_4_6.jpg" />
+    <Content Include="Content\assets\img\service\service_4_7.jpg" />
+    <Content Include="Content\assets\img\service\service_4_8.jpg" />
+    <Content Include="Content\assets\img\service\service_5_1.jpg" />
+    <Content Include="Content\assets\img\service\service_5_2.jpg" />
+    <Content Include="Content\assets\img\service\service_5_3.jpg" />
+    <Content Include="Content\assets\img\service\service_5_4.jpg" />
+    <Content Include="Content\assets\img\service\service_5_5.jpg" />
+    <Content Include="Content\assets\img\service\service_5_6.jpg" />
+    <Content Include="Content\assets\img\shape\award.svg" />
+    <Content Include="Content\assets\img\shape\balance.svg" />
+    <Content Include="Content\assets\img\shape\bed.svg" />
+    <Content Include="Content\assets\img\shape\chef.png" />
+    <Content Include="Content\assets\img\shape\line_shape.svg" />
+    <Content Include="Content\assets\img\shape\save-doller.svg" />
+    <Content Include="Content\assets\img\shape\save-money.svg" />
+    <Content Include="Content\assets\img\shape\shape-1.svg" />
+    <Content Include="Content\assets\img\shape\shape-2.svg" />
+    <Content Include="Content\assets\img\shape\shape.png" />
+    <Content Include="Content\assets\img\shape\shape_1.png" />
+    <Content Include="Content\assets\img\shape\user.svg" />
+    <Content Include="Content\assets\img\team\team_1_1.jpg" />
+    <Content Include="Content\assets\img\team\team_1_2.jpg" />
+    <Content Include="Content\assets\img\team\team_1_3.jpg" />
+    <Content Include="Content\assets\img\team\team_1_4.jpg" />
+    <Content Include="Content\assets\img\team\team_1_5.jpg" />
+    <Content Include="Content\assets\img\testimonial\author_1.png" />
+    <Content Include="Content\assets\img\testimonial\author_2.png" />
+    <Content Include="Content\assets\img\testimonial\author_3.png" />
+    <Content Include="Content\assets\img\testimonial\author_4.png" />
+    <Content Include="Content\assets\img\testimonial\author_5.png" />
+    <Content Include="Content\assets\img\testimonial\icon shape.png" />
+    <Content Include="Content\assets\img\testimonial\shape.png" />
+    <Content Include="Content\assets\img\testimonial\testi_1_1.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_1_2.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_1_3.jpg" />
+    <Content Include="Content\assets\img\testimonial\testi_img.png" />
+    <Content Include="Content\assets\img\theme-img\error.svg" />
+    <Content Include="Content\assets\img\widget\gallery_1_1.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_1_2.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_1_3.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_1_4.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_1_5.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_1_6.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_1_7.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_2_1.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_2_2.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_2_3.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_2_4.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_2_5.jpg" />
+    <Content Include="Content\assets\img\widget\gallery_2_6.jpg" />
+    <Content Include="Content\assets\js\bootstrap.min.js" />
+    <Content Include="Content\assets\js\datetimepicker.min.js" />
+    <Content Include="Content\assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="Content\assets\js\isotope.pkgd.min.js" />
+    <Content Include="Content\assets\js\jquery-3.6.0.min.js" />
+    <Content Include="Content\assets\js\jquery.counterup.min.js" />
+    <Content Include="Content\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\js\nice-select.min.js" />
+    <Content Include="Content\assets\js\slick.min.js" />
+    <Content Include="Content\assets\Logo\Budget hotel.png" />
+    <Content Include="Content\assets\Logo\goldlogo.png" />
+    <Content Include="Content\assets\Logo\logo1 %281%29.png" />
+    <Content Include="Content\assets\Logo\logo2.png" />
+    <Content Include="Content\assets\MONIKAimg\Agra.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel1.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel10.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel11.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel12.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel13.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel14.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel15.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel16.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel17.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel2.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel3.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel4.jpeg" />
+    <Content Include="Content\assets\MONIKAimg\hotel5.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel6.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel7.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel8.jpg" />
+    <Content Include="Content\assets\MONIKAimg\hotel9.jpg" />
+    <Content Include="Content\assets\MONIKAimg\jaipur1.jpg" />
+    <Content Include="Content\assets\MONIKAimg\manali.jpg" />
+    <Content Include="Content\assets\MONIKAimg\manali2.jpg" />
+    <Content Include="Content\assets\MONIKAimg\massurie.jpg" />
+    <Content Include="Content\assets\MONIKAimg\rishikesh.jpg" />
+    <Content Include="Content\assets\MONIKAimg\rishikesh2.jpg" />
+    <Content Include="Content\assets\MONIKAimg\shimla.jpg" />
+    <Content Include="Content\assets\MONIKAimg\shimla1.jpg" />
+    <Content Include="Content\assets\MONIKAimg\udaipur2.jpg" />
+    <Content Include="Content\assets\MONIKAimg\vrindavan.jpg" />
+    <Content Include="Content\assets\Satyaimg\jaipur1.jpg" />
+    <Content Include="Content\assets\Satyaimg\jaipur2.jpg" />
+    <Content Include="Content\assets\Satyaimg\jaipur3.jpg" />
+    <Content Include="Content\assets\Satyaimg\jaipur4.jpg" />
+    <Content Include="Content\assets\Satyaimg\jaipur5.jpg" />
+    <Content Include="Content\assets\Satyaimg\jaipur6.jpg" />
+    <Content Include="Content\assets\Satyaimg\manali1.jpg" />
+    <Content Include="Content\assets\Satyaimg\manali2.jpg" />
+    <Content Include="Content\assets\Satyaimg\manali3.jpg" />
+    <Content Include="Content\assets\Satyaimg\manali4.jpg" />
+    <Content Include="Content\assets\Satyaimg\mybcrmb1.png" />
+    <Content Include="Content\assets\Satyaimg\mybcrmb2.png" />
+    <Content Include="Content\assets\Satyaimg\mybcrmb3.png" />
+    <Content Include="Content\assets\Satyaimg\rishikesh1.jpg" />
+    <Content Include="Content\assets\Satyaimg\rishikesh2.jpg" />
+    <Content Include="Content\assets\Satyaimg\rishikesh3.jpg" />
+    <Content Include="Content\assets\Satyaimg\rishikesh4.jpg" />
+    <Content Include="Content\assets\Satyaimg\shimla1.jpg" />
+    <Content Include="Content\assets\Satyaimg\shimla2.jpg" />
+    <Content Include="Content\assets\Satyaimg\shimla3.jpg" />
+    <Content Include="Content\assets\Satyaimg\shimla4.jpg" />
+    <Content Include="Content\assets\Satyaimg\T1 %281%29.jpg" />
+    <Content Include="Content\assets\Satyaimg\T1 %282%29.jpg" />
+    <Content Include="Content\assets\Satyaimg\T1 %283%29.jpg" />
+    <Content Include="Content\assets\Satyaimg\T1 %284%29.jpg" />
+    <Content Include="Content\assets\Satyaimg\T1 %285%29.jpeg" />
+    <Content Include="Content\assets\Satyaimg\udaipur1.jpg" />
+    <Content Include="Content\assets\Satyaimg\udaipur2.jpg" />
+    <Content Include="Content\assets\Satyaimg\udaipur3.jpg" />
+    <Content Include="Content\assets\Satyaimg\udaipur4.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-brands-400.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-duotone-900.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-duotone-900.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-light-300.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-light-300.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-regular-400.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-solid-900.woff2" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-thin-100.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome\fa-thin-100.woff2" />
+    <Content Include="config\imageprocessor\security.config" />
+    <Content Include="config\imageprocessor\processing.config" />
+    <Content Include="config\imageprocessor\cache.config" />
+    <Content Include="Content\assets\AYUSIMG\img5.webp" />
+    <Content Include="Content\assets\img\HeritageHotels\Standard Single Room2.webp" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\AboutDelhi.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Home\HotelList.cshtml" />
+    <Content Include="Views\Home\TopDestination.cshtml" />
+    <Content Include="Views\Home\TourPackages.cshtml" />
+    <Content Include="Views\Home\TourPackageDetails.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60657</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44319/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
