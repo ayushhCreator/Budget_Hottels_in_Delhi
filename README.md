@@ -1,44 +1,49 @@
- The Online Hotel Reservation System is a project implemented for BUDGET HOTELS IN DELHI.  It provides people all Over the world with an easy and fast way to book hotel rooms online. It is very useful to all especially for business people. For Business people they don’t have sufficient time for these then they can use these types of Online Hotel Reservation System. The interface of the Online Hotel Booking System is Web pages that can be accessed with a Web site browser. 
-The system is implemented in FRONTEND (MVC MODEL IN ASP.NET) AND BACKEND (MYSQL). Users can perform room booking activities at BUDGET Hotel anytime and anywhere by accessing it via Internet.The Online Hotel Booking System is an easy-to-use application. Everyone who knows how to use a Web browser can easily carry out booking, change the booking details, cancel the booking, change the personal profile, view the booking history, or view the hotel information by following its simple and clear GUI (Graphical user interface) design.
+# Online Hotel Reservation System for Budget Hotels in Delhi
 
-                
-TOOLS AND ENVIRONMENT
+An easy-to-use web application designed to provide users worldwide with a fast and convenient way to book rooms at budget hotels in Delhi.
 
-Environment Required for MVC Asp.net:
-Operating Systems
-•	Window 11
-•	Windows 10
-•	Windows 8, 8.1
-•	Windows 7
-•	Windows vista
-•	Windows server 2008 and later
-•	Android 4.1 & later
-•	iOS 9 & later
+## ✨ Key Features
 
-	Hardware Environment
-•	Processor: x86 or x64
-•	RAM : 512 MB (minimum), 1 GB (recommended)
-•	Hard disc: up to 3 GB of free space may be required
+* Browse and book available rooms at budget hotels in Delhi.
+* User-friendly web interface accessible via any modern browser.
+* Manage bookings: modify or cancel existing reservations.
+* Personal profile management: update user details.
+* View booking history.
+* Access detailed hotel information.
+* Specifically beneficial for business travelers seeking efficient booking solutions.
 
-	Development Environment
-•	Microsoft Visual Studio 2010/2012/2013/2015/2017/2019/2022
-•	.NET Framework 3.5/4.0/4.5/4.5.1/4.6
-•	MVC Version: MVC3/MVC4/MVC5
-•	Microsoft SQL Server 2005 or higher
-•	Web browsers with JavaScript enabled
+## 🛠️ Tech Stack
 
-Presentation Tier:
-•	HTML
-•	CSS
-•	JAVASCRIPT
-•	MVC Model in C#
+**Frontend (Presentation Tier):**
+* HTML
+* CSS
+* JavaScript
+* ASP.NET MVC (C#)
 
-	Logic Tier/ Business Tier:
-C#
+**Backend (Logic/Business Tier):**
+* C#
 
-  Backend/Data Tier:
-ADO.Net
-SQL Server (Database)
+**Data Tier:**
+* ADO.Net
+* MySQL Database
 
+## ⚙️ Development Environment
 
+**Operating Systems:** Windows 11, 10, 8/8.1, 7, Vista, Server 2008+, Android 4.1+, iOS 9+
+**Hardware:**
+* Processor: x86 or x64
+* RAM: 512 MB (min), 1 GB (recommended)
+* Hard Disk: Up to 3 GB free space
+**Development Tools:**
+* Microsoft Visual Studio 2010/2012/2013/2015/2017/2019/2022
+* .NET Framework 3.5/4.0/4.5/4.5.1/4.6
+* MVC Version: MVC3/MVC4/MVC5
+* MySQL Server 2005 or higher
+* Web browsers with JavaScript enabled
 
+## 🚀 Getting Started (Optional - If you want others to run it)
+
+1.  Clone the repository: `git clone [repository URL]`
+2.  Set up the SQL server database...
+3.  Configure the ASP.NET application...
+4.  Run the application...
